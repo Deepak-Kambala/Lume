@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>My Profile - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
     <link rel="stylesheet" href="css/pages/post-opportunity.css">
     <link rel="stylesheet" href="css/pages/footer.css">
-    <link rel="stylesheet" href="css/pages/events.css"> </head>
+    <link rel="stylesheet" href="css/pages/my-profile.css"> </head>
 <body>
 
     <header>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -71,8 +71,7 @@
             </div>
 
             <div class="sidebar-links">
-                <div class="sidebar-link">
-                    <i class="fas fa-user"></i>
+                <div class="sidebar-link active"> <i class="fas fa-user"></i>
                     <span><a href="my-profile.html">My Profile</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -94,89 +93,106 @@
             </div>
         </div>
 
+        <div class="my-profile-content">
+            <div class="profile-header-section">
+                <div class="profile-banner-large"></div>
+                <div class="profile-details-top">
+                    <img src="https://via.placeholder.com/120x120" alt="Profile Picture" class="profile-pic-large">
+                    <div class="profile-intro">
+                        <h1>Dr. Sarah Johnson</h1>
+                        <p class="headline">Professor of Computer Science | Specializing in AI Ethics | MIT</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cambridge, Massachusetts, USA</p>
+                        <p class="contact-info"><i class="fas fa-envelope"></i> sarah.johnson@mit.edu | <i class="fas fa-phone-alt"></i> +1 617-555-1234</p>
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
-                </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
                     </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
+                    <a href="edit-profile.html" class="edit-profile-icon"><i class="fas fa-pencil-alt"></i></a>
                 </div>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
-                    </div>
+            <div class="profile-section about-section">
+                <div class="section-title-wrap">
+                    <h2>About</h2>
                 </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
+                <p>
+                    Dr. Sarah Johnson is a leading expert in Artificial Intelligence, with a focus on ethical AI development and its societal impact. She leads the Responsible AI Lab at MIT, conducting groundbreaking research in fair machine learning, transparency, and accountability in AI systems. Her work aims to build AI technologies that are robust, equitable, and beneficial for humanity. She is a strong advocate for interdisciplinary collaboration and frequently publishes in top-tier conferences and journals.
+                </p>
+                <p>
+                    **Research Interests:** Ethical AI, Fair Machine Learning, AI Transparency, Explainable AI (XAI), Human-AI Interaction, Data Privacy, Societal Impact of AI.
+                </p>
+            </div>
+
+            <div class="profile-section experience-section">
+                <div class="section-title-wrap">
+                    <h2>Experience</h2>
+                    <a href="edit-profile.html#experience" class="edit-section-btn"><i class="fas fa-plus"></i> Add Experience</a>
                 </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
+                <div class="experience-item">
+                    <h3>Professor of Computer Science</h3>
+                    <p class="org-duration">Massachusetts Institute of Technology (MIT) | Sep 2018 – Present</p>
+                    <ul>
+                        <li>Lead the Responsible AI Lab, overseeing 15+ doctoral and postdoctoral researchers.</li>
+                        <li>Secured over $5M in research grants from NSF and industry partners.</li>
+                        <li>Developed and taught graduate courses on AI Ethics and Advanced Machine Learning.</li>
+                        <li>Published 20+ peer-reviewed papers on AI fairness and explainability.</li>
+                    </ul>
                 </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
+                <div class="experience-item">
+                    <h3>Senior AI Researcher</h3>
+                    <p class="org-duration">Google AI | Jun 2014 – Aug 2018</p>
+                    <ul>
+                        <li>Contributed to the development of ethical guidelines for large-scale AI models.</li>
+                        <li>Published extensively on robust AI systems and adversarial attacks.</li>
+                        <li>Mentored junior researchers and interns.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
-                    </div>
+            <div class="profile-section education-section">
+                <div class="section-title-wrap">
+                    <h2>Education</h2>
+                    <a href="edit-profile.html#education" class="edit-section-btn"><i class="fas fa-plus"></i> Add Education</a>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
+                <div class="education-item">
+                    <h3>Ph.D. in Computer Science</h3>
+                    <p class="org-duration">Stanford University | Sep 2010 – May 2014</p>
+                    <p class="degree-details">Dissertation: "Algorithmic Fairness in High-Stakes Decision Making"</p>
                 </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
+                <div class="education-item">
+                    <h3>M.Sc. in Artificial Intelligence</h3>
+                    <p class="org-duration">Carnegie Mellon University | Sep 2008 – May 2010</p>
                 </div>
             </div>
+
+            <div class="profile-section certifications-section">
+                <div class="section-title-wrap">
+                    <h2>Certifications</h2>
+                    <a href="edit-profile.html#certifications" class="edit-section-btn"><i class="fas fa-plus"></i> Add Certification</a>
+                </div>
+                <div class="cert-item">
+                    <p><strong>IBM AI Ethics Professional Certificate</strong></p>
+                    <p class="cert-details">Issued by IBM | Issued: June 2023</p>
+                </div>
+                <div class="cert-item">
+                    <p><strong>Deep Learning Specialization</strong></p>
+                    <p class="cert-details">Issued by Coursera (DeepLearning.AI) | Issued: March 2022</p>
+                </div>
+            </div>
+
+            <div class="profile-section publications-section">
+                <div class="section-title-wrap">
+                    <h2>Publications</h2>
+                    <a href="my-publications.html" class="edit-section-btn"><i class="fas fa-arrow-right"></i> View All</a>
+                </div>
+                <div class="publication-preview-item">
+                    <p><strong>Explainable AI for Medical Diagnostics: A Case Study in Cardiology</strong></p>
+                    <p class="pub-details">Nature Machine Intelligence, 2024</p>
+                </div>
+                <div class="publication-preview-item">
+                    <p><strong>Bias Detection and Mitigation in Large Language Models</strong></p>
+                    <p class="pub-details">Proc. AAAI Conference on Artificial Intelligence, 2023</p>
+                </div>
+            </div>
+
         </div>
 
         <div class="right-sidebar">

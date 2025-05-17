@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>Create New Research Group - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
     <link rel="stylesheet" href="css/pages/post-opportunity.css">
     <link rel="stylesheet" href="css/pages/footer.css">
-    <link rel="stylesheet" href="css/pages/events.css"> </head>
+    <link rel="stylesheet" href="css/pages/add-publication.css"> 
+</head>
 <body>
 
     <header>
@@ -25,7 +26,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -79,7 +80,7 @@
                     <i class="fas fa-book"></i>
                     <span><a href="my-publications.html">My Publications</a></span>
                 </div>
-                <div class="sidebar-link">
+                <div class="sidebar-link active">
                     <i class="fas fa-users"></i>
                     <span><a href="research-groups.html">Research Groups</a></span>
                 </div>
@@ -94,89 +95,51 @@
             </div>
         </div>
 
+        <div class="add-publication-form-container"> <h2>Create New Research Group</h2>
+            <form class="add-publication-form">
+                <div class="form-group">
+                    <label for="group-name">Group Name</label>
+                    <input type="text" id="group-name" name="group-name" placeholder="e.g., AI in Healthcare Research Group" required>
+                </div>
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
+                <div class="form-group">
+                    <label for="group-description">Group Description</label>
+                    <textarea id="group-description" name="group-description" rows="6" placeholder="Provide a detailed description of your group's focus, goals, and activities." required></textarea>
                 </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
-                    </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
-                    </div>
+                <div class="form-group">
+                    <label for="research-area">Primary Research Area</label>
+                    <select id="research-area" name="research-area" required>
+                        <option value="">Select a research area</option>
+                        <option value="AI">Artificial Intelligence</option>
+                        <option value="Quantum">Quantum Computing</option>
+                        <option value="Bioinformatics">Bioinformatics</option>
+                        <option value="Robotics">Robotics</option>
+                        <option value="Materials">Materials Science</option>
+                        <option value="Neuroscience">Neuroscience</option>
+                        <option value="Environmental">Environmental Science</option>
+                        </select>
                 </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
-                    </div>
+                <div class="form-group">
+                    <label for="access-type">Access Type</label>
+                    <select id="access-type" name="access-type">
+                        <option value="public">Public (Anyone can join)</option>
+                        <option value="private">Private (Requires approval)</option>
+                        <option value="hidden">Hidden (Invite-only)</option>
+                    </select>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
+
+                <div class="form-group">
+                    <label for="group-logo">Upload Group Logo (Optional)</label>
+                    <input type="file" id="group-logo" name="group-logo" accept="image/*">
                 </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Create Group</button>
+                    <button type="button" class="cancel-btn" onclick="window.location.href='research-groups.html'">Cancel</button>
                 </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
 
         <div class="right-sidebar">

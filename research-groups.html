@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>Research Groups - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
     <link rel="stylesheet" href="css/pages/post-opportunity.css">
     <link rel="stylesheet" href="css/pages/footer.css">
-    <link rel="stylesheet" href="css/pages/events.css"> </head>
+    <link rel="stylesheet" href="css/pages/research-groups.css"> </head>
 <body>
 
     <header>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -83,8 +83,7 @@
                     <i class="fas fa-users"></i>
                     <span><a href="research-groups.html">Research Groups</a></span>
                 </div>
-                <div class="sidebar-link">
-                    <i class="fas fa-calendar-alt"></i>
+                <div class="sidebar-link active"> <i class="fas fa-calendar-alt"></i>
                     <span><a href="events.html">Events</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -92,89 +91,148 @@
                     <span>Saved Items</span>
                 </div>
             </div>
+                
         </div>
 
+        <div class="research-groups-content">
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
-                </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
-                    </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
+            <div class="section-header">
+                <h2>Research Groups</h2>
+                <a href="create-group.html" class="create-group-btn">
+                    <i class="fas fa-plus"></i> Create New Group
+                </a>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
+            <div class="my-groups-section">
+                <h3>My Existing Groups</h3>
+                <div class="my-groups-list">
+                    <div class="my-group-item">
+                        <img src="https://via.placeholder.com/60x60" alt="Group Logo" class="my-group-logo">
+                        <div class="my-group-info">
+                            <h4><a href="#">AI in Healthcare</a></h4>
+                            <p>45 members · 12 active discussions</p>
+                            <div class="my-group-members-preview">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <span class="member-count">+42</span>
+                            </div>
+                        </div>
+                        <button class="my-group-view-btn"><i class="fas fa-arrow-right"></i> View</button>
                     </div>
-                </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
+
+                    <div class="my-group-item">
+                        <img src="https://via.placeholder.com/60x60" alt="Group Logo" class="my-group-logo">
+                        <div class="my-group-info">
+                            <h4><a href="#">Quantum Computing Research</a></h4>
+                            <p>28 members · 5 new posts</p>
+                            <div class="my-group-members-preview">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                                <span class="member-count">+25</span>
+                            </div>
+                        </div>
+                        <button class="my-group-view-btn"><i class="fas fa-arrow-right"></i> View</button>
                     </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
+
+                    <div class="no-my-groups" style="display: none;">
+                        <p>You haven't joined any groups yet. Explore groups below to find your community!</p>
                     </div>
                 </div>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
+            <hr class="section-divider"> <div class="section-header">
+                <h2>Explore All Research Groups</h2>
+            </div>
+
+            <div class="group-filters">
+                <input type="text" placeholder="Search groups by name or topic..." class="group-search-input">
+                <select class="group-filter-select">
+                    <option value="">Filter by Area</option>
+                    <option value="AI">Artificial Intelligence</option>
+                    <option value="Quantum">Quantum Computing</option>
+                    <option value="Bioinformatics">Bioinformatics</option>
+                    <option value="Robotics">Robotics</option>
+                    <option value="Materials">Materials Science</option>
+                </select>
+                <select class="group-filter-select">
+                    <option value="">Sort by</option>
+                    <option value="activity">Most Active</option>
+                    <option value="members">Most Members</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div class="group-list">
+                <div class="group-item-card">
+                    <img src="https://via.placeholder.com/80x80" alt="Group Logo" class="group-card-logo">
+                    <div class="group-card-details">
+                        <h3>AI in Healthcare Research Group</h3>
+                        <p class="group-card-description">A collaborative space for researchers exploring the application of AI in medical diagnostics, drug discovery, and patient care.</p>
+                        <div class="group-card-stats">
+                            <span><i class="fas fa-users"></i> 45 Members</span>
+                            <span><i class="fas fa-chart-line"></i> Active: Daily</span>
+                        </div>
+                        <div class="group-card-members">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <span class="member-count-lg">+42 more</span>
+                        </div>
+                        <div class="group-card-actions">
+                            <a href="#" class="view-group-btn"><i class="fas fa-eye"></i> View Group</a>
+                            <button class="join-group-btn"><i class="fas fa-plus-circle"></i> Join Group</button>
+                        </div>
                     </div>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
+
+                <div class="group-item-card">
+                    <img src="https://via.placeholder.com/80x80" alt="Group Logo" class="group-card-logo">
+                    <div class="group-card-details">
+                        <h3>Advanced Quantum Computing Lab</h3>
+                        <p class="group-card-description">Dedicated to cutting-edge research in quantum algorithms, quantum error correction, and the development of new quantum hardware architectures.</p>
+                        <div class="group-card-stats">
+                            <span><i class="fas fa-users"></i> 28 Members</span>
+                            <span><i class="fas fa-chart-line"></i> Active: Weekly</span>
+                        </div>
+                        <div class="group-card-members">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <span class="member-count-lg">+25 more</span>
+                        </div>
+                        <div class="group-card-actions">
+                            <a href="#" class="view-group-btn"><i class="fas fa-eye"></i> View Group</a>
+                            <button class="join-group-btn"><i class="fas fa-plus-circle"></i> Join Group</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
+
+                <div class="group-item-card">
+                    <img src="https://via.placeholder.com/80x80" alt="Group Logo" class="group-card-logo">
+                    <div class="group-card-details">
+                        <h3>Sustainable Energy Systems</h3>
+                        <p class="group-card-description">Focuses on innovations in renewable energy, energy storage, smart grids, and policies for a sustainable future.</p>
+                        <div class="group-card-stats">
+                            <span><i class="fas fa-users"></i> 60 Members</span>
+                            <span><i class="fas fa-chart-line"></i> Active: Monthly</span>
+                        </div>
+                        <div class="group-card-members">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <img src="https://via.placeholder.com/30x30" alt="Member" class="member-avatar-lg">
+                            <span class="member-count-lg">+56 more</span>
+                        </div>
+                        <div class="group-card-actions">
+                            <a href="#" class="view-group-btn"><i class="fas fa-eye"></i> View Group</a>
+                            <button class="join-group-btn"><i class="fas fa-plus-circle"></i> Join Group</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
+
+                <div class="no-groups" style="display: none;">
+                    <p>No research groups found matching your criteria. Try adjusting your search or filters.</p>
                 </div>
             </div>
         </div>
@@ -309,5 +367,5 @@
         </div>
     </footer>
     <script src="js/pages/home.js"></script>
-</body>
+    <script src="js/pages/research-groups.js"></script> </body>
 </html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Opportunity - ResearchConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common/header.css">
+    <link rel="stylesheet" href="css/pages/post-opportunity.css">
+    <link rel="stylesheet" href="css/pages/footer.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="ResearchConnect Logo">
+                <h1>ResearchConnect</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for researchers, publications...">
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-links">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span><a href="index.htm">Home</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span><a href="network.html">Network</a></span>
+                </div>
+                <div class="nav-item active">
+                    <i class="fas fa-briefcase"></i>
+                    <span><a href="opportunities.html">Opportunities</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <span><a href="messages.html">Messages</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bell"></i>
+                    <span><a href="notifications.html">Notifications</a></span>
+                </div>
+            </div>
+            
+            
+        </div>
+    </header>
+
+    <div class="post-opportunity-container">
+        <div class="post-opportunity-header">
+            <h1>Post a Research Opportunity</h1>
+            <p>Fill out the form below to post your research position, grant, or collaboration opportunity.</p>
+        </div>
+
+        <form id="postOpportunityForm" class="multi-step-form">
+            <!-- Step 1: Opportunity Details -->
+            <div class="form-step active" data-step="1">
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    <div class="form-group">
+                        <label for="opportunityTitle">Opportunity Title*</label>
+                        <input type="text" id="opportunityTitle" required placeholder="e.g., Postdoctoral Position in AI">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="opportunityType">Opportunity Type*</label>
+                            <select id="opportunityType" required>
+                                <option value="">Select type</option>
+                                <option value="postdoc">Postdoctoral Position</option>
+                                <option value="phd">PhD Position</option>
+                                <option value="ra">Research Assistant</option>
+                                <option value="internship">Research Internship</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="positionCount">Number of Positions</label>
+                            <input type="number" id="positionCount" min="1" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Institution Details</h3>
+                    <div class="form-group">
+                        <label for="institutionName">Institution/Organization Name*</label>
+                        <input type="text" id="institutionName" required placeholder="e.g., Massachusetts Institute of Technology">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="department">Department/Lab</label>
+                            <input type="text" id="department" placeholder="e.g., Computer Science and Artificial Intelligence Laboratory">
+                        </div>
+                        <div class="form-group">
+                            <label for="supervisor">Supervisor/PI Name</label>
+                            <input type="text" id="supervisor" placeholder="e.g., Dr. Jane Doe">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Research Area</h3>
+                    <div class="form-group">
+                        <label for="researchAreas">Research Areas*</label>
+                        <select id="researchAreas" multiple required>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="ml">Machine Learning</option>
+                            <option value="biotech">Biotechnology</option>
+                            <option value="genomics">Genomics</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keywords">Keywords (comma separated)</label>
+                        <input type="text" id="keywords" placeholder="e.g., deep learning, healthcare, NLP">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Position Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDate">Expected Start Date*</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <input type="text" id="duration" placeholder="e.g., 2 years, 6 months">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="applicationDeadline">Application Deadline*</label>
+                            <input type="date" id="applicationDeadline" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="isRemote">Work Arrangement</label>
+                            <select id="isRemote">
+                                <option value="in_person">In-person</option>
+                                <option value="remote">Fully Remote</option>
+                                <option value="hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location (if not remote)</label>
+                        <input type="text" id="location" placeholder="e.g., Cambridge, MA, USA">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Compensation</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="stipendAmount">Stipend/Salary (per month)</label>
+                            <input type="number" id="stipendAmount" placeholder="Amount in ₹">
+                        </div>
+                        <div class="form-group">
+                            <label for="benefits">Additional Benefits</label>
+                            <textarea id="benefits" rows="3" placeholder="Health insurance, travel grants, etc."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="next-step">Next: Requirements <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 2: Requirements -->
+            <div class="form-step" data-step="2">
+                <div class="form-section">
+                    <h3>Position Description</h3>
+                    <div class="form-group">
+                        <label for="positionDescription">Detailed Description*</label>
+                        <textarea id="positionDescription" rows="6" required placeholder="Describe the research project, goals, and expectations..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Eligibility Requirements</h3>
+                    <div class="form-group">
+                        <label for="educationLevel">Minimum Education Level*</label>
+                        <select id="educationLevel" required>
+                            <option value="">Select</option>
+                            <option value="bachelors">Bachelor's Degree</option>
+                            <option value="masters">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="degreeFields">Required Degree Field(s)</label>
+                        <input type="text" id="degreeFields" placeholder="e.g., Computer Science, Biology, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skillsRequired">Required Skills/Expertise*</label>
+                        <textarea id="skillsRequired" rows="4" required placeholder="List the technical skills, software knowledge, or other expertise required"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experienceRequired">Years of Experience (if applicable)</label>
+                        <input type="text" id="experienceRequired" placeholder="e.g., 2+ years in machine learning">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Application Materials</h3>
+                    <div class="form-group">
+                        <label>Required Documents (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="applicationMaterials" value="cv"> CV/Resume</label>
+                            <label><input type="checkbox" name="applicationMaterials" value="cover_letter"> Cover Letter</label>
+                            <label><input type="checkbox" name="applicationMaterials" value="transcripts"> Transcripts</label>
+                            <label><input type="checkbox" name="applicationMaterials" value="research_statement"> Research Statement</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalMaterials">Additional Application Notes</label>
+                        <textarea id="additionalMaterials" rows="3" placeholder="Any special instructions for applicants"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="next-step">Next: Review & Submit <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Review & Submit -->
+            <div class="form-step" data-step="3">
+                <div class="form-section">
+                    <h3>Review Your Opportunity</h3>
+                    <p>Please review all the information below before submitting.</p>
+                    
+                    <div class="review-section">
+                        <h4>Basic Information</h4>
+                        <div class="review-item">
+                            <span class="review-label">Opportunity Title:</span>
+                            <span id="review-title" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Opportunity Type:</span>
+                            <span id="review-type" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Number of Positions:</span>
+                            <span id="review-positions" class="review-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-section">
+                        <h4>Institution Details</h4>
+                        <div class="review-item">
+                            <span class="review-label">Institution:</span>
+                            <span id="review-institution" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Department/Lab:</span>
+                            <span id="review-department" class="review-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-section">
+                        <h4>Research Area</h4>
+                        <div class="review-item">
+                            <span class="review-label">Research Areas:</span>
+                            <span id="review-areas" class="review-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-section">
+                        <h4>Position Details</h4>
+                        <div class="review-item">
+                            <span class="review-label">Start Date:</span>
+                            <span id="review-start-date" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Duration:</span>
+                            <span id="review-duration" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Deadline:</span>
+                            <span id="review-deadline" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Location:</span>
+                            <span id="review-location" class="review-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-section">
+                        <h4>Compensation</h4>
+                        <div class="review-item">
+                            <span class="review-label">Stipend/Salary:</span>
+                            <span id="review-stipend" class="review-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-section">
+                        <h4>Requirements</h4>
+                        <div class="review-item">
+                            <span class="review-label">Description:</span>
+                            <div id="review-description" class="review-value long-text"></div>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Education:</span>
+                            <span id="review-education" class="review-value"></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Required Skills:</span>
+                            <div id="review-skills" class="review-value long-text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="contactName">Your Name*</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email*</label>
+                        <input type="email" id="contactEmail" required>
+                        <p class="help-text">This will be visible to applicants unless you specify otherwise below.</p>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="hideContactInfo"> Hide my contact information from public view
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="submit-form">Submit Opportunity</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>ResearchConnect</h3>
+      <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">
+        Connecting researchers worldwide to collaborate, share knowledge, and advance science together.
+      </p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.htm"><i class="fas fa-chevron-right"></i> Home</a></li>
+        <li><a href="network.html"><i class="fas fa-chevron-right"></i> Network</a></li>
+        <li><a href="opportunities.html"><i class="fas fa-chevron-right"></i> Opportunities</a></li>
+        <li><a href="messages.html"><i class="fas fa-chevron-right"></i> Messages</a></li>
+        <li><a href="notifications.html"><i class="fas fa-chevron-right"></i> Notifications</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Research Areas</h3>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Computer Science</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Medicine</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Engineering</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Social Sciences</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Natural Sciences</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> 123 Research Ave, Boston, MA 02115</p>
+        <p><i class="fas fa-phone-alt"></i> +1 (617) 555-0123</p>
+        <p><i class="fas fa-envelope"></i> contact@researchconnect.edu</p>
+      </div>
+      
+      <h3 style="margin-top: 1.5rem;">Newsletter</h3>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2023 ResearchConnect. All rights reserved. | <a href="#" style="color: var(--secondary-color);">Privacy Policy</a> | <a href="#" style="color: var(--secondary-color);">Terms of Service</a></p>
+  </div>
+</footer>
+<script src="js/pages/post-opportunity.js"></script>
+</body>
+</html>
