@@ -1,0 +1,517 @@
+/* Variables (ensure these are consistent across your project) */
+:root {
+/* Darker blue for hover/active */
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --border-color: #e0e0e0;
+    --background-light: #f9f9f9;
+    --card-background: #fff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+/* My Profile Main Content Area */
+.my-profile-content {
+    flex: 2;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    overflow: hidden; /* For the banner image */
+}
+
+/* Profile Header Section (Banner and main details) */
+.profile-header-section {
+    position: relative;
+    margin-bottom: 20px; /* Space between header and first content section */
+}
+
+.profile-banner-large {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background: url('https://via.placeholder.com/1000x200/555555/dddddd?text=Profile+Banner') no-repeat center center / cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-details-top {
+    position: relative;
+    padding: 0 30px 20px;
+    margin-top: -60px; /* Pull profile pic and details up over banner */
+    display: flex;
+    align-items: flex-end; /* Align intro text to the bottom */
+    gap: 20px;
+}
+
+.profile-pic-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--card-background); /* White border around picture */
+    box-shadow: 0 2px 8px var(--shadow-medium);
+    object-fit: cover;
+    background-color: #fff; /* Fallback for placeholder */
+}
+
+.profile-intro {
+    flex-grow: 1;
+}
+
+.profile-intro h1 {
+    margin: 0 0 5px;
+    font-size: 2.2em;
+    color: var(--text-color-dark);
+}
+
+.profile-intro .headline {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.profile-intro .location,
+.profile-intro .contact-info {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-intro .contact-info i {
+    font-size: 0.8em;
+}
+
+.profile-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.message-btn, .connect-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+}
+
+.message-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.message-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+
+.edit-profile-icon {
+    position: absolute;
+    top: 210px; /* Adjust based on banner height and profile pic overlap */
+    right: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-dark);
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-profile-icon:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+/* General Profile Section Styling */
+.profile-section {
+    background-color: var(--card-background);
+    border-bottom: 1px solid var(--border-color); /* Subtle divider */
+    padding: 25px 30px;
+}
+
+.profile-section:last-of-type {
+    border-bottom: none; /* No border for the last section */
+    padding-bottom: 30px;
+}
+
+.section-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-section h2 {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--text-color-dark);
+}
+
+.edit-section-btn {
+    background-color: #f0f0f0;
+    color: var(--text-color-medium);
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-section-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* About Section */
+.about-section p {
+    color: var(--text-color-medium);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Experience & Education Sections */
+.experience-item, .education-item, .cert-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color); /* Lighter divider for items */
+}
+
+.experience-item:last-child, .education-item:last-child, .cert-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-item h3, .education-item h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+    color: var(--text-color-dark);
+}
+
+.experience-item .org-duration, .education-item .org-duration, .cert-item .cert-details {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: 8px;
+}
+
+.experience-item ul {
+    margin: 10px 0 0 20px;
+    padding: 0;
+    list-style: disc;
+    color: var(--text-color-medium);
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.education-item .degree-details {
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-top: 5px;
+}
+
+/* Certifications Section */
+.cert-item p {
+    margin: 0;
+    color: var(--text-color-dark);
+}
+
+/* Publications Preview Section */
+.publication-preview-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.publication-preview-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publication-preview-item p {
+    margin: 0;
+    color: var(--text-color-dark);
+}
+
+.publication-preview-item .pub-details {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+
+/* Edit Profile Specific Styles (Applies to edit-profile.html) */
+.edit-profile-content {
+    padding: 20px 30px;
+}
+
+.edit-profile-content h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.edit-form-section {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.edit-form-section h2 {
+    font-size: 1.5em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-edit-form .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-edit-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color-dark);
+    font-size: 0.95em;
+}
+
+.profile-edit-form .form-group input[type="text"],
+.profile-edit-form .form-group input[type="email"],
+.profile-edit-form .form-group input[type="tel"],
+.profile-edit-form .form-group input[type="url"],
+.profile-edit-form .form-group input[type="month"],
+.profile-edit-form .form-group textarea,
+.profile-edit-form .form-group select {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease;
+}
+
+.profile-edit-form .form-group input[type="text"]:focus,
+.profile-edit-form .form-group input[type="email"]:focus,
+.profile-edit-form .form-group input[type="tel"]:focus,
+.profile-edit-form .form-group input[type="url"]:focus,
+.profile-edit-form .form-group input[type="month"]:focus,
+.profile-edit-form .form-group textarea:focus,
+.profile-edit-form .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.profile-edit-form .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.profile-edit-form .form-group input[type="file"] {
+    padding: 8px 0;
+    font-size: 0.95em;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+    margin-bottom: 0; /* Remove bottom margin from child form groups */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions .submit-btn,
+.form-actions .cancel-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-actions .submit-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.form-actions .submit-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.form-actions .cancel-btn {
+    background-color: #e0e0e0;
+    color: var(--text-color-dark);
+    border: 1px solid #ccc;
+}
+
+.form-actions .cancel-btn:hover {
+    background-color: #ccc;
+}
+
+.form-section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 30px 0;
+}
+
+/* Existing items in edit forms (for experience, education, certifications) */
+.existing-items {
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.existing-items h3 {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.existing-item-card {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.existing-item-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.existing-item-card h4 {
+    margin: 0;
+    font-size: 1em;
+    color: var(--text-color-dark);
+    flex-grow: 1; /* Allows title to take available space */
+}
+
+.existing-item-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    flex-basis: 100%; /* Makes description go to new line */
+    margin-top: 5px;
+}
+
+.existing-item-card .edit-link {
+    font-size: 0.85em;
+    white-space: nowrap; /* Prevent "Edit | Delete" from breaking */
+}
+
+.existing-item-card .edit-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 10px; /* Space from title */
+    transition: color 0.2s ease;
+}
+
+.existing-item-card .edit-link a:hover {
+    text-decoration: underline;
+}
+
+.existing-item-card .edit-link .delete-link {
+    color: #dc3545; /* Red for delete */
+}
+
+.existing-item-card .edit-link .delete-link:hover {
+    color: #c82333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-details-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edit-profile-icon {
+        top: 180px; /* Adjust if layout shifts significantly */
+        right: 20px;
+    }
+
+    .profile-intro .location,
+    .profile-intro .contact-info {
+        justify-content: center;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-group-inline {
+        flex-direction: column;
+        gap: 0; /* Remove gap for stacked inputs */
+    }
+}

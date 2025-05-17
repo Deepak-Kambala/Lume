@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>My Publications - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
     <link rel="stylesheet" href="css/pages/post-opportunity.css">
     <link rel="stylesheet" href="css/pages/footer.css">
-    <link rel="stylesheet" href="css/pages/events.css"> </head>
+    <link rel="stylesheet" href="css/pages/my-publications.css"> </head>
 <body>
 
     <header>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -75,8 +75,7 @@
                     <i class="fas fa-user"></i>
                     <span><a href="my-profile.html">My Profile</a></span>
                 </div>
-                <div class="sidebar-link">
-                    <i class="fas fa-book"></i>
+                <div class="sidebar-link active"> <i class="fas fa-book"></i>
                     <span><a href="my-publications.html">My Publications</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -94,87 +93,45 @@
             </div>
         </div>
 
-
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
-                </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
-                    </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
+        <div class="my-publications-content">
+            <div class="section-header">
+                <h2>My Publications</h2>
+                <a href="add-publication.html" class="add-publication-btn">
+                    <i class="fas fa-plus"></i> Add New Publication
+                </a>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <div class="publication-details">
+                        <h4>Explainable AI for Medical Diagnostics: A Deep Dive</h4>
+                        <p class="authors">S. Johnson, M. Chen, L. Kim</p>
+                        <p class="journal">Nature Machine Intelligence, Vol. 5, No. 10 (2023)</p>
+                        <p class="abstract">This paper explores novel methods for developing explainable AI models specifically tailored for diagnostic applications in medicine...</p>
+                        <div class="publication-actions">
+                            <a href="#" class="action-link"><i class="fas fa-eye"></i> View</a>
+                            <a href="#" class="action-link"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="#" class="action-link"><i class="fas fa-trash-alt"></i> Delete</a>
+                        </div>
                     </div>
                 </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
+                <div class="publication-item">
+                    <div class="publication-details">
+                        <h4>Quantum Algorithms for Drug Discovery: A Review</h4>
+                        <p class="authors">S. Johnson, D. Lee, R. Sharma</p>
+                        <p class="journal">Journal of Chemical Physics, Vol. 15, No. 3 (2022)</p>
+                        <p class="abstract">A comprehensive review of the current state and future prospects of quantum algorithms applied to the field of drug discovery and materials science...</p>
+                        <div class="publication-actions">
+                            <a href="#" class="action-link"><i class="fas fa-eye"></i> View</a>
+                            <a href="#" class="action-link"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="#" class="action-link"><i class="fas fa-trash-alt"></i> Delete</a>
+                        </div>
                     </div>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
+
+                <div class="no-publications" style="display: none;">
+                    <p>You haven't added any publications yet. Click the button above to get started!</p>
                 </div>
             </div>
         </div>

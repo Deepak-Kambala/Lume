@@ -1,0 +1,96 @@
+/* Styling for the Add New Publication form container */
+.add-publication-form-container {
+    flex: 2; /* Takes more space than sidebars */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-publication-form-container h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.add-publication-form .form-group {
+    margin-bottom: 20px;
+}
+
+.add-publication-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.add-publication-form .form-group input[type="text"],
+.add-publication-form .form-group input[type="date"],
+.add-publication-form .form-group textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-publication-form .form-group input[type="text"]:focus,
+.add-publication-form .form-group input[type="date"]:focus,
+.add-publication-form .form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Subtle focus highlight */
+    outline: none;
+}
+
+.add-publication-form .form-group textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 100px;
+}
+
+.add-publication-form .form-group input[type="file"] {
+    padding: 8px 0;
+}
+
+.add-publication-form .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.add-publication-form .submit-btn,
+.add-publication-form .cancel-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-publication-form .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.add-publication-form .submit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.add-publication-form .cancel-btn {
+    background-color: #6c757d; /* Grey for cancel */
+    color: #fff;
+}
+
+.add-publication-form .cancel-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}

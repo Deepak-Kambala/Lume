@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>Events - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -83,8 +83,7 @@
                     <i class="fas fa-users"></i>
                     <span><a href="research-groups.html">Research Groups</a></span>
                 </div>
-                <div class="sidebar-link">
-                    <i class="fas fa-calendar-alt"></i>
+                <div class="sidebar-link active"> <i class="fas fa-calendar-alt"></i>
                     <span><a href="events.html">Events</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -94,89 +93,131 @@
             </div>
         </div>
 
+        <div class="events-content">
+            <div class="content-header">
+                <h1>Upcoming Events</h1>
+                <a href="create-event.html" class="create-event-btn"><i class="fas fa-plus-circle"></i> Create New Event</a>
+            </div>
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
+            <div class="event-filter-sort">
+                <div class="filter-group">
+                    <label for="event-type">Type:</label>
+                    <select id="event-type">
+                        <option value="all">All Types</option>
+                        <option value="webinar">Webinar</option>
+                        <option value="conference">Conference</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="seminar">Seminar</option>
+                    </select>
                 </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
+                <div class="filter-group">
+                    <label for="event-location">Location:</label>
+                    <select id="event-location">
+                        <option value="all">All Locations</option>
+                        <option value="online">Online</option>
+                        <option value="on-campus">On-Campus</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by">
+                        <option value="date">Date (Upcoming)</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="recent">Recently Added</option>
+                    </select>
+                </div>
+                <button class="apply-filters-btn"><i class="fas fa-filter"></i> Apply</button>
+            </div>
+
+
+            <div class="event-list">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Dec</span>
+                        <span class="day">10</span>
+                        <span class="year">2025</span>
                     </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
+                    <div class="event-info">
+                        <h2>International Conference on AI Ethics 2025</h2>
+                        <p class="event-meta">
+                            <i class="fas fa-calendar-alt"></i> Dec 10-12, 2025
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> MIT, Cambridge, MA & Online
+                            <span class="separator">|</span>
+                            <i class="fas fa-users"></i> Organized by MIT AI Lab
+                        </p>
+                        <p class="event-description">
+                            Join leading researchers and policymakers to discuss the ethical implications and responsible development of artificial intelligence. Keynote speakers include Dr. Emily Chang (Google AI) and Prof. David Lee (Stanford).
+                        </p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-details">View Details</a>
+                            <a href="#" class="btn btn-register"><i class="fas fa-ticket-alt"></i> Register</a>
+                            <a href="#" class="btn btn-share"><i class="fas fa-share-alt"></i> Share</a>
+                        </div>
                     </div>
-                    <button class="post-button">Post</button>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Jan</span>
+                        <span class="day">15</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-info">
+                        <h2>Webinar: Latest Trends in Quantum Computing</h2>
+                        <p class="event-meta">
+                            <i class="fas fa-calendar-alt"></i> Jan 15, 2026, 3:00 PM EST
+                            <span class="separator">|</span>
+                            <i class="fas fa-globe"></i> Online
+                            <span class="separator">|</span>
+                            <i class="fas fa-users"></i> Hosted by Quantum Research Forum
+                        </p>
+                        <p class="event-description">
+                            A live webinar exploring the cutting-edge advancements and future outlook of quantum computing. Q&A session with experts from IBM Quantum.
+                        </p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-details">View Details</a>
+                            <a href="#" class="btn btn-register"><i class="fas fa-ticket-alt"></i> Register</a>
+                            <a href="#" class="btn btn-share"><i class="fas fa-share-alt"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Feb</span>
+                        <span class="day">01</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-info">
+                        <h2>Machine Learning Workshop for Beginners</h2>
+                        <p class="event-meta">
+                            <i class="fas fa-calendar-alt"></i> Feb 1-2, 2026
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Stanford University, CA
+                            <span class="separator">|</span>
+                            <i class="fas fa-users"></i> Organized by Stanford CS Dept.
+                        </p>
+                        <p class="event-description">
+                            An intensive two-day workshop covering the fundamentals of machine learning, including supervised and unsupervised learning algorithms, model evaluation, and hands-on coding exercises.
+                        </p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-details">View Details</a>
+                            <a href="#" class="btn btn-register"><i class="fas fa-ticket-alt"></i> Register</a>
+                            <a href="#" class="btn btn-share"><i class="fas fa-share-alt"></i> Share</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
-                    </div>
-                </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">Next &raquo;</a>
             </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
-                    </div>
-                </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="right-sidebar">

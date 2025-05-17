@@ -1,0 +1,469 @@
+/* Variables (ensure consistency with your existing CSS) */
+:root {
+
+    --accent-color: #28a745; /* Green for success/add actions */
+    --danger-color: #dc3545; /* Red for delete/cancel */
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --border-color: #e0e0e0;
+    --background-light: #f9f9f9;
+    --card-background: #fff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+/* Main content area for events */
+.events-content {
+    flex: 2;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 25px;
+}
+
+.events-content .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.events-content h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.create-event-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.create-event-btn:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Event Filters and Sort */
+.event-filter-sort {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    align-items: flex-end; /* Align elements to the bottom */
+}
+
+.event-filter-sort .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-filter-sort label {
+    font-weight: bold;
+    color: var(--text-color-dark);
+    font-size: 0.95em;
+}
+
+.event-filter-sort select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.apply-filters-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    height: 40px; /* Match height of select inputs */
+}
+
+.apply-filters-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Event List and Cards */
+.event-list {
+    display: grid;
+    gap: 25px; /* Space between event cards */
+}
+
+.event-card {
+    display: flex;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.event-date {
+    flex-shrink: 0; /* Prevent date section from shrinking */
+    width: 90px; /* Fixed width for date */
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.event-date .month {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.event-date .day {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 5px;
+}
+.event-date .year {
+    font-size: 0.9em;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.event-info {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.event-info h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.event-meta {
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow meta items to wrap */
+    gap: 8px;
+}
+
+.event-meta i {
+    margin-right: 3px;
+    color: var(--primary-color);
+}
+
+.event-meta .separator {
+    color: #ccc;
+    font-weight: lighter;
+}
+
+.event-description {
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.event-actions .btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.event-actions .btn-details {
+    background-color: #f0f0f0;
+    color: var(--text-color-medium);
+    border: 1px solid #ccc;
+}
+
+.event-actions .btn-details:hover {
+    background-color: #e0e0e0;
+    color: var(--text-color-dark);
+}
+
+.event-actions .btn-register {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 1px solid var(--accent-color);
+}
+
+.event-actions .btn-register:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.event-actions .btn-share {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.event-actions .btn-share:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Create Event Form Page */
+.create-event-form-container {
+    padding: 30px;
+}
+
+.create-event-form-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+.create-event-form {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px; /* Limit form width for better readability */
+    margin: 0 auto; /* Center the form */
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.create-event-form .form-group {
+    margin-bottom: 20px;
+}
+
+.create-event-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color-dark);
+    font-size: 1em;
+}
+
+.create-event-form .form-group input[type="text"],
+.create-event-form .form-group input[type="url"],
+.create-event-form .form-group input[type="date"],
+.create-event-form .form-group input[type="time"],
+.create-event-form .form-group select,
+.create-event-form .form-group textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.3s ease;
+}
+
+.create-event-form .form-group input:focus,
+.create-event-form .form-group select:focus,
+.create-event-form .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.create-event-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.create-event-form .form-group .hint {
+    font-size: 0.85em;
+    color: var(--text-color-medium);
+    margin-top: 5px;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+    margin-bottom: 0; /* Remove bottom margin from child form groups */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-actions .submit-btn,
+.form-actions .cancel-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-actions .submit-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.form-actions .submit-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.form-actions .cancel-btn {
+    background-color: #e0e0e0;
+    color: var(--text-color-dark);
+    border: 1px solid #ccc;
+}
+
+.form-actions .cancel-btn:hover {
+    background-color: #ccc;
+}
+
+.required {
+    color: var(--danger-color);
+    margin-left: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .events-content {
+        padding: 15px;
+    }
+
+    .events-content .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .event-filter-sort {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .event-filter-sort .filter-group {
+        width: 100%;
+    }
+
+    .apply-filters-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .event-date .day {
+        font-size: 2em;
+    }
+    .event-date .month, .event-date .year {
+        font-size: 0.9em;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .event-meta .separator {
+        display: none; /* Hide separator in stacked view */
+    }
+
+    .event-actions {
+        flex-direction: column;
+    }
+    .event-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .create-event-form {
+        padding: 20px;
+    }
+
+    .form-group-inline {
+        flex-direction: column;
+        gap: 0;
+    }
+}

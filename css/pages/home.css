@@ -2,7 +2,7 @@
             --primary-color: #0a66c2;
             --secondary-color: #378fe9;
             --dark-color: #1d1d1d;
-            --light-color: #f3f2ef;
+            --light-color: #bfbfbf;
             --accent-color: #915907;
             --success-color: #2e7d32;
         }
@@ -468,6 +468,50 @@ header {
         .create-group:hover {
             background-color: #e6f0f9;
         }
+
+        /* Inside css/pages/home.css or a new buttons.css */
+
+.post-box .post-actions {
+    display: flex;
+    justify-content: space-between; /* This will spread out the items */
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color); /* Assuming you have this variable */
+    margin-top: 15px;
+}
+
+.post-box .post-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color-medium); /* Assuming you have this variable */
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.post-box .post-action:hover {
+    color: var(--primary-color); /* Assuming you have this variable */
+}
+
+.post-box .post-action i {
+    font-size: 1.1em;
+}
+
+.post-box .post-button {
+    background-color: var(--primary-color); /* Use your primary color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-box .post-button:hover {
+    background-color: var(--secondary-color); /* Darker shade for hover */
+}
         
         .create-group i {
             width: 40px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>Create New Event - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -83,8 +83,7 @@
                     <i class="fas fa-users"></i>
                     <span><a href="research-groups.html">Research Groups</a></span>
                 </div>
-                <div class="sidebar-link">
-                    <i class="fas fa-calendar-alt"></i>
+                <div class="sidebar-link active"> <i class="fas fa-calendar-alt"></i>
                     <span><a href="events.html">Events</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -94,89 +93,101 @@
             </div>
         </div>
 
+        <div class="events-content create-event-form-container">
+            <h1>Create New Event</h1>
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
+            <form class="create-event-form">
+                <div class="form-group">
+                    <label for="event-title">Event Title <span class="required">*</span></label>
+                    <input type="text" id="event-title" name="event-title" placeholder="e.g., Annual AI Symposium" required>
                 </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
-                    </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
-                    </div>
+                <div class="form-group">
+                    <label for="event-description">Event Description <span class="required">*</span></label>
+                    <textarea id="event-description" name="event-description" rows="6" placeholder="Provide a detailed description of your event, including objectives, target audience, and key topics." required></textarea>
                 </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="event-type">Event Type <span class="required">*</span></label>
+                        <select id="event-type" name="event-type" required>
+                            <option value="">Select Type</option>
+                            <option value="webinar">Webinar</option>
+                            <option value="conference">Conference</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="seminar">Seminar</option>
+                            <option value="lecture">Guest Lecture</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location-type">Location Type <span class="required">*</span></label>
+                        <select id="event-location-type" name="event-location-type" required>
+                            <option value="">Select Location Type</option>
+                            <option value="online">Online</option>
+                            <option value="physical">Physical Location</option>
+                            <option value="hybrid">Hybrid (Online & Physical)</option>
+                        </select>
                     </div>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
+
+                <div class="form-group" id="physical-location-group" style="display: none;">
+                    <label for="physical-location">Physical Location Details</label>
+                    <input type="text" id="physical-location" name="physical-location" placeholder="e.g., MIT Stata Center, Room 32-141, Cambridge, MA">
+                    <p class="hint">Provide full address and venue details for physical events.</p>
                 </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
+                 <div class="form-group" id="online-platform-group" style="display: none;">
+                    <label for="online-platform">Online Platform / Link</label>
+                    <input type="url" id="online-platform" name="online-platform" placeholder="e.g., https://zoom.us/j/your-webinar-link">
+                    <p class="hint">Provide the link for online attendees.</p>
                 </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
+
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="start-date">Start Date <span class="required">*</span></label>
+                        <input type="date" id="start-date" name="start-date" required>
                     </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
+                    <div class="form-group">
+                        <label for="start-time">Start Time <span class="required">*</span></label>
+                        <input type="time" id="start-time" name="start-time" required>
                     </div>
                 </div>
-            </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="end-date">End Date</label>
+                        <input type="date" id="end-date" name="end-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="end-time">End Time</label>
+                        <input type="time" id="end-time" name="end-time">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="organizer">Organizer(s) / Host(s) <span class="required">*</span></label>
+                    <input type="text" id="organizer" name="organizer" placeholder="e.g., MIT AI Lab, Quantum Research Forum" required>
+                    <p class="hint">Specify who is organizing or hosting this event.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="registration-link">Registration Link (Optional)</label>
+                    <input type="url" id="registration-link" name="registration-link" placeholder="https://your-registration-site.com">
+                    <p class="hint">Link where attendees can register or RSVP.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-image">Event Banner Image (Optional)</label>
+                    <input type="file" id="event-image" name="event-image" accept="image/*">
+                    <p class="hint">Upload an image to represent your event.</p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn"><i class="fas fa-calendar-plus"></i> Create Event</button>
+                    <button type="button" class="cancel-btn" onclick="window.location.href='events.html'">Cancel</button>
+                </div>
+            </form>
         </div>
 
         <div class="right-sidebar">
@@ -309,5 +320,46 @@
         </div>
     </footer>
     <script src="js/pages/home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationTypeSelect = document.getElementById('event-location-type');
+            const physicalLocationGroup = document.getElementById('physical-location-group');
+            const onlinePlatformGroup = document.getElementById('online-platform-group');
+            const physicalLocationInput = document.getElementById('physical-location');
+            const onlinePlatformInput = document.getElementById('online-platform');
+
+            function toggleLocationFields() {
+                const selectedValue = locationTypeSelect.value;
+                if (selectedValue === 'physical') {
+                    physicalLocationGroup.style.display = 'block';
+                    onlinePlatformGroup.style.display = 'none';
+                    physicalLocationInput.setAttribute('required', 'required');
+                    onlinePlatformInput.removeAttribute('required');
+                } else if (selectedValue === 'online') {
+                    physicalLocationGroup.style.display = 'none';
+                    onlinePlatformGroup.style.display = 'block';
+                    onlinePlatformInput.setAttribute('required', 'required');
+                    physicalLocationInput.removeAttribute('required');
+                } else if (selectedValue === 'hybrid') {
+                    physicalLocationGroup.style.display = 'block';
+                    onlinePlatformGroup.style.display = 'block';
+                    physicalLocationInput.setAttribute('required', 'required');
+                    onlinePlatformInput.setAttribute('required', 'required');
+                }
+                else {
+                    physicalLocationGroup.style.display = 'none';
+                    onlinePlatformGroup.style.display = 'none';
+                    physicalLocationInput.removeAttribute('required');
+                    onlinePlatformInput.removeAttribute('required');
+                }
+            }
+
+            // Initial call to set correct visibility on page load
+            toggleLocationFields();
+
+            // Add event listener for changes
+            locationTypeSelect.addEventListener('change', toggleLocationFields);
+        });
+    </script>
 </body>
 </html>

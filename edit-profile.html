@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit My Profile - ResearchConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/common/header.css">
+    <link rel="stylesheet" href="css/pages/post-opportunity.css">
+    <link rel="stylesheet" href="css/pages/footer.css">
+    <link rel="stylesheet" href="css/pages/my-profile.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/30x30" alt="Lume Logo">
+                <h1>Lume</h1>
+            </div>
+
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for researchers, publications...">
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span><a href="index.htm">Home</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span><a href="network.html">Network</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span><a href="opportunities.html">Opportunities</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <span><a href="messages.html">Messages</a></span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bell"></i>
+                    <span><a href="notifications.html">Notifications</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="left-sidebar">
+            <div class="profile-card">
+                <div class="profile-banner"></div>
+                <div class="profile-info">
+                    <img src="https://via.placeholder.com/80x80" alt="Profile Picture" class="profile-pic">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p>Professor of Computer Science | MIT</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <h4>142</h4>
+                            <p>Connections</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>87</h4>
+                            <p>Publications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-links">
+                <div class="sidebar-link active"> <i class="fas fa-user"></i>
+                    <span><a href="my-profile.html">My Profile</a></span>
+                </div>
+                <div class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span><a href="my-publications.html">My Publications</a></span>
+                </div>
+                <div class="sidebar-link">
+                    <i class="fas fa-users"></i>
+                    <span><a href="research-groups.html">Research Groups</a></span>
+                </div>
+                <div class="sidebar-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span><a href="events.html">Events</a></span>
+                </div>
+                <div class="sidebar-link">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Saved Items</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-profile-content edit-profile-content">
+            <h1>Edit Profile</h1>
+
+            <div id="personal-info" class="edit-form-section">
+                <h2>Personal Information</h2>
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" value="Dr. Sarah Johnson" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="headline">Headline</label>
+                        <input type="text" id="headline" name="headline" value="Professor of Computer Science | Specializing in AI Ethics | MIT" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" value="Cambridge, Massachusetts, USA">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="sarah.johnson@mit.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" value="+1 617-555-1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-pic-upload">Update Profile Picture</label>
+                        <input type="file" id="profile-pic-upload" name="profile-pic-upload" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-banner-upload">Update Banner Image</label>
+                        <input type="file" id="profile-banner-upload" name="profile-banner-upload" accept="image/*">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Save Changes</button>
+                        <button type="button" class="cancel-btn" onclick="window.location.href='my-profile.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <hr class="form-section-divider">
+
+            <div id="about" class="edit-form-section">
+                <h2>About Me</h2>
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="about-text">About</label>
+                        <textarea id="about-text" name="about-text" rows="8" required>Dr. Sarah Johnson is a leading expert in Artificial Intelligence, with a focus on ethical AI development and its societal impact. She leads the Responsible AI Lab at MIT, conducting groundbreaking research in fair machine learning, transparency, and accountability in AI systems. Her work aims to build AI technologies that are robust, equitable, and beneficial for humanity. She is a strong advocate for interdisciplinary collaboration and frequently publishes in top-tier conferences and journals.
+
+Research Interests: Ethical AI, Fair Machine Learning, AI Transparency, Explainable AI (XAI), Human-AI Interaction, Data Privacy, Societal Impact of AI.</textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Save Changes</button>
+                        <button type="button" class="cancel-btn" onclick="window.location.href='my-profile.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <hr class="form-section-divider">
+
+            <div id="experience" class="edit-form-section">
+                <h2>Experience</h2>
+                <div class="existing-items">
+                    <h3>Existing Experience</h3>
+                    <div class="existing-item-card">
+                        <h4>Professor of Computer Science <span class="edit-link"><a href="#">Edit</a> | <a href="#" class="delete-link">Delete</a></span></h4>
+                        <p>Massachusetts Institute of Technology (MIT) | Sep 2018 – Present</p>
+                    </div>
+                    <div class="existing-item-card">
+                        <h4>Senior AI Researcher <span class="edit-link"><a href="#">Edit</a> | <a href="#" class="delete-link">Delete</a></span></h4>
+                        <p>Google AI | Jun 2014 – Aug 2018</p>
+                    </div>
+                </div>
+
+                <h3>Add New Experience</h3>
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" name="job-title" placeholder="e.g., Postdoctoral Researcher">
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company/University</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="e.g., Stanford University">
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="start-date-exp">Start Date</label>
+                            <input type="month" id="start-date-exp" name="start-date-exp">
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date-exp">End Date (or Present)</label>
+                            <input type="month" id="end-date-exp" name="end-date-exp">
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="current-job" name="current-job">
+                        <label for="current-job">I currently work here</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-description">Description (Responsibilities, achievements)</label>
+                        <textarea id="job-description" name="job-description" rows="4" placeholder="Describe your role and key accomplishments."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Experience</button>
+                        <button type="button" class="cancel-btn">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <hr class="form-section-divider">
+
+            <div id="education" class="edit-form-section">
+                <h2>Education</h2>
+                <div class="existing-items">
+                    <h3>Existing Education</h3>
+                    <div class="existing-item-card">
+                        <h4>Ph.D. in Computer Science <span class="edit-link"><a href="#">Edit</a> | <a href="#" class="delete-link">Delete</a></span></h4>
+                        <p>Stanford University | Sep 2010 – May 2014</p>
+                    </div>
+                </div>
+
+                <h3>Add New Education</h3>
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="degree">Degree/Qualification</label>
+                        <input type="text" id="degree" name="degree" placeholder="e.g., Ph.D. in Physics">
+                    </div>
+                    <div class="form-group">
+                        <label for="university">University/Institution</label>
+                        <input type="text" id="university" name="university" placeholder="e.g., University of Cambridge">
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="start-date-edu">Start Date</label>
+                            <input type="month" id="start-date-edu" name="start-date-edu">
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date-edu">End Date (or Expected)</label>
+                            <input type="month" id="end-date-edu" name="end-date-edu">
+                        </div>
+                    </div>
+                     <div class="form-group checkbox-group">
+                        <input type="checkbox" id="current-study" name="current-study">
+                        <label for="current-study">I currently study here</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="thesis">Thesis/Dissertation (Optional)</label>
+                        <input type="text" id="thesis" name="thesis" placeholder="e.g., Machine Learning for Climate Modeling">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Education</button>
+                        <button type="button" class="cancel-btn">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <hr class="form-section-divider">
+
+            <div id="certifications" class="edit-form-section">
+                <h2>Certifications</h2>
+                <div class="existing-items">
+                    <h3>Existing Certifications</h3>
+                    <div class="existing-item-card">
+                        <h4>IBM AI Ethics Professional Certificate <span class="edit-link"><a href="#">Edit</a> | <a href="#" class="delete-link">Delete</a></span></h4>
+                        <p>Issued by IBM | Issued: June 2023</p>
+                    </div>
+                    <div class="existing-item-card">
+                        <h4>Deep Learning Specialization <span class="edit-link"><a href="#">Edit</a> | <a href="#" class="delete-link">Delete</a></span></h4>
+                        <p>Issued by Coursera (DeepLearning.AI) | Issued: March 2022</p>
+                    </div>
+                </div>
+
+                <h3>Add New Certification</h3>
+                <form class="profile-edit-form">
+                    <div class="form-group">
+                        <label for="cert-name">Certification Name</label>
+                        <input type="text" id="cert-name" name="cert-name" placeholder="e.g., AWS Certified Machine Learning Specialty">
+                    </div>
+                    <div class="form-group">
+                        <label for="issuing-org">Issuing Organization</label>
+                        <input type="text" id="issuing-org" name="issuing-org" placeholder="e.g., Amazon Web Services">
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-date">Issue Date</label>
+                        <input type="month" id="issue-date" name="issue-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="credential-id">Credential ID (Optional)</label>
+                        <input type="text" id="credential-id" name="credential-id" placeholder="e.g., ABC123DEF456">
+                    </div>
+                    <div class="form-group">
+                        <label for="credential-url">Credential URL (Optional)</label>
+                        <input type="url" id="credential-url" name="credential-url" placeholder="https://example.com/certificate">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Certification</button>
+                        <button type="button" class="cancel-btn">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="right-sidebar">
+            <div class="opportunities-card">
+                <div class="card-header">
+                    <h3>Featured Opportunities</h3>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="opportunity-item">
+                    <img src="https://via.placeholder.com/50x50" alt="MIT Logo" class="uni-logo">
+                    <div class="opportunity-info">
+                        <h4>MIT Postdoc Position</h4>
+                        <p>Computer Science - AI Research</p>
+                        <small>Application closes in 3 days</small>
+                    </div>
+                </div>
+                <div class="opportunity-item">
+                    <img src="https://via.placeholder.com/50x50" alt="Oxford Logo" class="uni-logo">
+                    <div class="opportunity-info">
+                        <h4>Oxford Visiting Scholar</h4>
+                        <p>Quantum Computing</p>
+                        <small>Starts September 2024</small>
+                    </div>
+                </div>
+                <div class="opportunity-item">
+                    <img src="https://via.placeholder.com/50x50" alt="ETH Zurich Logo" class="uni-logo">
+                    <div class="opportunity-info">
+                        <h4>ETH Zurich Research Grant</h4>
+                        <p>Renewable Energy Technologies</p>
+                        <small>Up to CHF 250,000 funding</small>
+                    </div>
+                </div>
+                <a href="#" class="view-all">View all opportunities</a>
+            </div>
+
+            <div class="groups-card">
+                <div class="card-header">
+                    <h3>Your Research Groups</h3>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="group-item">
+                    <img src="https://via.placeholder.com/50x50" alt="Group Avatar" class="group-avatar">
+                    <div class="group-info">
+                        <h4>AI in Healthcare</h4>
+                        <p>45 members · 12 active</p>
+                        <div class="group-members">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <span class="member-count">+42</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <img src="https://via.placeholder.com/50x50" alt="Group Avatar" class="group-avatar">
+                    <div class="group-info">
+                        <h4>Quantum Computing</h4>
+                        <p>28 members · 5 active</p>
+                        <div class="group-members">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <img src="https://via.placeholder.com/25x25" alt="Member" class="member-avatar">
+                            <span class="member-count">+25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create-group">
+                    <i class="fas fa-plus"></i>
+                    <span>Create new group</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ResearchConnect</h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">
+                    Connecting researchers worldwide to collaborate, share knowledge, and advance science together.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.htm"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="network.html"><i class="fas fa-chevron-right"></i> Network</a></li>
+                    <li><a href="opportunities.html"><i class="fas fa-chevron-right"></i> Opportunities</a></li>
+                    <li><a href="messages.html"><i class="fas fa-chevron-right"></i> Messages</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-chevron-right"></i> Notifications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Research Areas</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Computer Science</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Medicine</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Engineering</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Social Sciences</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Natural Sciences</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Research Ave, Boston, MA 02115</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (617) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> contact@researchconnect.edu</p>
+                </div>
+
+                <h3 style="margin-top: 1.5rem;">Newsletter</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 ResearchConnect. All rights reserved. | <a href="#" style="color: var(--secondary-color);">Privacy Policy</a> | <a href="#" style="color: var(--secondary-color);">Terms of Service</a></p>
+        </div>
+    </footer>
+    <script src="js/pages/home.js"></script>
+</body>
+</html>

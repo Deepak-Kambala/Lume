@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResearchConnect - Collaborate on Research</title>
+    <title>Add New Publication - ResearchConnect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/common/header.css">
     <link rel="stylesheet" href="css/pages/post-opportunity.css">
     <link rel="stylesheet" href="css/pages/footer.css">
-    <link rel="stylesheet" href="css/pages/events.css"> </head>
+    <link rel="stylesheet" href="css/pages/add-publication.css"> </head>
 <body>
 
     <header>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="nav-links">
-                <div class="nav-item active">
+                <div class="nav-item">
                     <i class="fas fa-home"></i>
                     <span><a href="index.htm">Home</a></span>
                 </div>
@@ -73,10 +73,9 @@
             <div class="sidebar-links">
                 <div class="sidebar-link">
                     <i class="fas fa-user"></i>
-                    <span><a href="my-profile.html">My Profile</a></span>
+                    <span>My Profile</span>
                 </div>
-                <div class="sidebar-link">
-                    <i class="fas fa-book"></i>
+                <div class="sidebar-link active"> <i class="fas fa-book"></i>
                     <span><a href="my-publications.html">My Publications</a></span>
                 </div>
                 <div class="sidebar-link">
@@ -94,89 +93,69 @@
             </div>
         </div>
 
+        <div class="add-publication-form-container">
+            <h2>Add New Publication</h2>
+            <form class="add-publication-form">
+                <div class="form-group">
+                    <label for="title">Publication Title</label>
+                    <input type="text" id="title" name="title" placeholder="e.g., Explainable AI for Medical Diagnostics" required>
+                </div>
 
-        <div class="main-content">
-            <div class="post-box">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="post-avatar">
-                    <input type="text" class="post-input" placeholder="Start a post...">
+                <div class="form-group">
+                    <label for="authors">Authors (comma separated)</label>
+                    <input type="text" id="authors" name="authors" placeholder="e.g., S. Johnson, M. Chen, L. Kim" required>
                 </div>
-                <div class="post-actions">
-                    <div class="post-action">
-                        <i class="fas fa-image"></i>
-                        <span>Photo</span>
-                    </div>
-                    <div class="post-action">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Document</span>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Professor of AI | Stanford University · 2h ago</p>
-                    </div>
+                <div class="form-group">
+                    <label for="journal">Journal/Conference/Publisher</label>
+                    <input type="text" id="journal" name="journal" placeholder="e.g., Nature Machine Intelligence">
                 </div>
-                <div class="feed-content">
-                    <p>Excited to share our latest research paper on "Explainable AI for Medical Diagnostics" has been accepted at Nature Machine Intelligence! 🎉</p>
-                    <p>Special thanks to my amazing team @StanfordAI for their hard work. This could revolutionize how doctors interpret AI recommendations in clinical settings.</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Research Paper" class="feed-image">
-                </div>
-                <div class="feed-stats">
-                    <span>42 Likes · 8 Comments</span>
-                </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="feed-item">
-                <div class="feed-header">
-                    <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
-                    <div class="feed-user">
-                        <h4>Harvard Research</h4>
-                        <p>Official Page · 5h ago</p>
-                    </div>
+                <div class="form-group">
+                    <label for="publication-date">Publication Date</label>
+                    <input type="date" id="publication-date" name="publication-date" required>
                 </div>
-                <div class="feed-content">
-                    <p>📢 Calling all researchers! Harvard University is offering 15 fully-funded PhD positions across various disciplines for the 2024 academic year.</p>
-                    <p>Application deadline: January 15, 2024. Don't miss this opportunity to work with world-class faculty and access cutting-edge facilities!</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Harvard Campus" class="feed-image">
+
+                <div class="form-group">
+                    <label for="volume">Volume</label>
+                    <input type="text" id="volume" name="volume" placeholder="e.g., Vol. 5">
                 </div>
-                <div class="feed-stats">
-                    <span>128 Likes · 23 Comments</span>
+
+                <div class="form-group">
+                    <label for="issue">Issue</label>
+                    <input type="text" id="issue" name="issue" placeholder="e.g., No. 10">
                 </div>
-                <div class="feed-actions">
-                    <div class="feed-action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment</span>
-                    </div>
-                    <div class="feed-action">
-                        <i class="fas fa-share"></i>
-                        <span>Share</span>
-                    </div>
+
+                <div class="form-group">
+                    <label for="pages">Pages</label>
+                    <input type="text" id="pages" name="pages" placeholder="e.g., 123-145">
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="doi">DOI (Digital Object Identifier)</label>
+                    <input type="text" id="doi" name="doi" placeholder="e.g., 10.1038/s42256-023-00508-y">
+                </div>
+
+                <div class="form-group">
+                    <label for="abstract">Abstract</label>
+                    <textarea id="abstract" name="abstract" rows="6" placeholder="Provide a brief summary of your publication..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="keywords">Keywords (comma separated)</label>
+                    <input type="text" id="keywords" name="keywords" placeholder="e.g., AI, Medical Diagnostics, Explainable AI">
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Upload PDF / Document (Optional)</label>
+                    <input type="file" id="file" name="file" accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Add Publication</button>
+                    <button type="button" class="cancel-btn" onclick="window.location.href='my-publications.html'">Cancel</button>
+                </div>
+            </form>
         </div>
 
         <div class="right-sidebar">
