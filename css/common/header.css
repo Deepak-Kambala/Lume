@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lume Header</title>
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <style>
-    
-
-    * {
+* {
          margin: 0;
          padding: 0;
          box-sizing: border-box;
@@ -121,49 +108,3 @@
       text-decoration: none;
       color: inherit;
     }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-container">
-      <!-- Logo -->
-      <div class="logo">
-        <img src="https://via.placeholder.com/30x30" alt="Lume Logo">
-        <h1>Lume</h1>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search for researchers, publications...">
-      </div>
-
-      <!-- Navigation -->
-      <div class="nav-links">
-        <div class="nav-item active">
-          <i class="fas fa-home"></i>
-          <span>Home</span>
-        </div>
-        <div class="nav-item">
-          <i class="fas fa-users"></i>
-          <span>Network</span>
-        </div>
-        <div class="nav-item">
-          <i class="fas fa-briefcase"></i>
-          <span><a href="opportunities.html">Opportunities</a></span>
-        </div>
-        <div class="nav-item">
-          <i class="fas fa-comment-dots"></i>
-          <span>Messages</span>
-        </div>
-        <div class="nav-item">
-          <i class="fas fa-bell"></i>
-          <span>Notifications</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-</body>
-</html>

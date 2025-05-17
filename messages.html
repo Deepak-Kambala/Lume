@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages - ResearchConnect</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="css/pages/messages.css">
+   <link rel="stylesheet" href="css/common/header.css">
+</head>
+<body>
+
+   <header>
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="https://via.placeholder.com/30x30" alt="Lume Logo">
+        <h1>Lume</h1>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search for researchers, publications...">
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav-links">
+        <div class="nav-item active">
+          <i class="fas fa-home"></i>
+          <span><a href="index.htm">Home</a></span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-users"></i>
+          <span><a href="network.html">Network</a></span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-briefcase"></i>
+          <span><a href="opportunities.html">Opportunities</a></span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-comment-dots"></i>
+          <span><a href="messages.html">Messages</a></span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-bell"></i>
+          <span><a href="notifications.html">Notifications</a></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="messages-container">
+    <!-- Left Sidebar - Conversation List -->
+    <section class="sidebar">
+      <h2>Messages</h2>
+      <div class="conversation-list">
+        <div class="conversation active">
+          <img src="https://via.placeholder.com/40" alt="User 1">
+          <div class="info">
+            <h4>Dr. Sarah Johnson</h4>
+            <p>Thanks! Let’s connect next week.</p>
+          </div>
+        </div>
+        <div class="conversation">
+          <img src="https://via.placeholder.com/40" alt="User 2">
+          <div class="info">
+            <h4>Dr. Michael Chen</h4>
+            <p>I'll send over the paper soon.</p>
+          </div>
+        </div>
+        <!-- Add more conversations here -->
+      </div>
+    </section>
+
+    <!-- Right Panel - Chat Window -->
+    <section class="chat-window">
+      <div class="chat-header">
+        <img src="https://via.placeholder.com/40" alt="User">
+        <div>
+          <h3>Dr. Sarah Johnson</h3>
+          <p>Professor at MIT</p>
+        </div>
+      </div>
+      
+      <div class="chat-body">
+        <div class="message received">Hi! Are you attending the conference next month?</div>
+        <div class="message sent">Yes! I’ll be presenting a paper on federated learning.</div>
+        <div class="message received">Great! Let’s catch up there.</div>
+      </div>
+      
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message...">
+        <button><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

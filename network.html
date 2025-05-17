@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Notifications - ResearchConnect</title>
+  <title>Network - ResearchConnect</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="css/pages/notifications.css">
+  <link rel="stylesheet" href="css/pages/network.css">
   <link rel="stylesheet" href="css/common/header.css">
 </head>
 <body>
 
-   <header>
+  <header>
     <div class="header-container">
       <!-- Logo -->
       <div class="logo">
@@ -52,50 +52,43 @@
   </header>
 
 
-  <main class="notifications-container">
+  <main class="network-container">
+    <h2>Your Network</h2>
 
-    <h2>Notifications</h2>
+    <section class="suggestions">
+      <h3>People you may know</h3>
 
-    <!-- Profile Views -->
-    <section class="notification-card">
-      <i class="fas fa-user-circle icon view"></i>
-      <div class="content">
-        <h4>4 Researchers viewed your profile</h4>
-        <p>Dr. Sarah Johnson, Dr. Amit Rao, and 2 others checked your profile this week.</p>
-        <span class="time">1 hour ago</span>
+      <div class="profile-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Photo">
+        <div class="info">
+          <h4>Dr. Anjali Verma</h4>
+          <p>Data Scientist · IIT Bombay</p>
+          <small>5 mutual connections</small>
+          <button class="connect-btn"><i class="fas fa-user-plus"></i> Connect</button>
+        </div>
       </div>
-    </section>
 
-    <!-- Network Activity -->
-    <section class="notification-card">
-      <i class="fas fa-user-plus icon network"></i>
-      <div class="content">
-        <h4>New Connection Requests</h4>
-        <p>Dr. Emily Zhang and Dr. Carlos Rivera want to connect with you.</p>
-        <span class="time">3 hours ago</span>
+      <div class="profile-card">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Profile Photo">
+        <div class="info">
+          <h4>Dr. Ravi Malhotra</h4>
+          <p>Quantum Researcher · MIT</p>
+          <small>2 mutual connections</small>
+          <button class="connect-btn"><i class="fas fa-user-plus"></i> Connect</button>
+        </div>
       </div>
-    </section>
 
-    <!-- Post Likes -->
-    <section class="notification-card">
-      <i class="fas fa-heart icon like"></i>
-      <div class="content">
-        <h4>Your research update received 12 likes</h4>
-        <p>Your post on “Quantum Error Correction” got engagement from top scholars.</p>
-        <span class="time">Yesterday</span>
+      <div class="profile-card">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+        <div class="info">
+          <h4>Dr. Michael Ortiz</h4>
+          <p>AI in Healthcare · Stanford</p>
+          <small>3 mutual connections</small>
+          <button class="connect-btn"><i class="fas fa-user-plus"></i> Connect</button>
+        </div>
       </div>
-    </section>
 
-    <!-- Comments -->
-    <section class="notification-card">
-      <i class="fas fa-comment-dots icon comment"></i>
-      <div class="content">
-        <h4>New Comments on your post</h4>
-        <p>Dr. Michael Chen commented on your update about “Neural Symbolic Integration”.</p>
-        <span class="time">2 days ago</span>
-      </div>
     </section>
-
   </main>
 
 </body>
