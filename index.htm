@@ -110,9 +110,11 @@
                         <i class="fas fa-file-alt"></i>
                         <span>Document</span>
                     </div>
-                    <button class="post-button">Post</button>
+                    <button onclick="openModal()" class="post-button">Post</button>
+
                 </div>
             </div>
+            
 
             <div class="feed-item">
                 <div class="feed-header">
@@ -309,5 +311,71 @@
         </div>
     </footer>
     <script src="js/pages/home.js"></script>
+    <script>
+    function openModal() {
+        document.getElementById("postModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("postModal").style.display = "none";
+    }
+
+    function submitPost() {
+        const postText = document.getElementById("postText").value.trim();
+        const postTitle = document.getElementById("postTitle").value.trim();
+
+        if (postText === "") {
+            alert("Please write something before posting.");
+            return;
+        }
+
+        const postHTML = `
+        <div class="feed-item">
+            <div class="feed-header">
+                <img src="https://via.placeholder.com/50x50" alt="User Avatar" class="feed-avatar">
+                <div class="feed-user">
+                    <h4>You</h4>
+                    <p>Just now</p>
+                </div>
+            </div>
+            <div class="feed-content">
+                ${postTitle ? `<h4>${postTitle}</h4>` : ""}
+                <p>${postText}</p>
+            </div>
+            <div class="feed-stats">
+                <span>0 Likes · 0 Comments</span>
+            </div>
+            <div class="feed-actions">
+                <div class="feed-action"><i class="far fa-thumbs-up"></i><span> Like</span></div>
+                <div class="feed-action"><i class="far fa-comment"></i><span> Comment</span></div>
+                <div class="feed-action"><i class="fas fa-share"></i><span> Share</span></div>
+            </div>
+        </div>`;
+
+        const feed = document.getElementById("feed");
+        feed.insertAdjacentHTML("afterbegin", postHTML);
+
+        document.getElementById("postText").value = "";
+        document.getElementById("postTitle").value = "";
+        closeModal();
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+        const modal = document.getElementById("postModal");
+        if (event.target === modal) closeModal();
+    };
+</script>
+<div id="postModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Create Post</h2>
+        <input type="text" id="postTitle" placeholder="Add a title (optional)">
+        <textarea id="postText" placeholder="Write your post here..."></textarea>
+        <button onclick="submitPost()" class="submit-post">Post</button>
+    </div>
+</div>
+
+
 </body>
 </html>

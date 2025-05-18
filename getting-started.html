@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .neon-text {
+            text-shadow: 0 0 8px rgba(96, 165, 250, 0.8); /* Blue neon */
+        }
+        .bg-gradient-neon {
+             background: linear-gradient(to bottom, #1e3a8a, #172554);
+        }
+        .glass-box {
+            background-color: rgba(255, 255, 255, 0.06); /* Super transparent white */
+            backdrop-filter: blur(12px); /* Add a blur effect */
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Softer shadow */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Add a border */
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-neon min-h-screen flex flex-col">
+    <header class="py-6 px-6 sm:px-8 md:px-10 lg:px-12 flex items-center">
+        <img src="your-logo.png" alt="Lume Logo" class="mr-4 h-8 sm:h-10 rounded-full"> <h1 class="text-3xl sm:text-4xl font-semibold text-white neon-text">Lume</h1>
+    </header>
+    <main class="flex-grow flex items-center justify-center">
+        <div class="text-center px-6 sm:px-8 md:px-10 lg:px-12">
+            <div class="glass-box p-6 sm:p-8 md:p-10 rounded-xl mb-8 max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400 neon-text mb-4 sm:mb-6">
+                    Bridging Ambition with Opportunity
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto">
+                    Our platform connects curious students with researchers who need support, making research more accessible, collaborative, and human. We believe it shouldn’t be this hard to connect people who want to learn with those who need support.
+                </p>
+
+            <button onclick="window.location.href='login-signup.html'" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out text-lg sm:text-xl">
+                Get Started
+            </button>
+            </div>
+        </div>
+    </main>
+    <footer class="py-6 px-6 sm:px-8 md:px-10 lg:px-12 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Lume</p>
+    </footer>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const headline = document.querySelector('h2');
+            headline.style.opacity = 0;
+            headline.style.transition = 'opacity 1s ease-in-out';
+            setTimeout(() => {
+                headline.style.opacity = 1;
+                headline.classList.add('neon-text')
+            }, 500); // Start fading in after 0.5 seconds
+        });
+    </script>
+</body>
+</html>
